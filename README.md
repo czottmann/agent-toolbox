@@ -112,7 +112,7 @@ Optional, if you want to use Google Gemini as a tool and **have it use CC's cont
 
 Carlo Zottmann, <carlo@zottmann.dev>, https://c.zottmann.dev, https://github.com/czottmann
 
-> [!note] Did you know?
+> ### 💡 Did you know?
 >
 > I make Shortcuts-related macOS & iOS productivity apps like [Actions For Obsidian](https://actions.work/actions-for-obsidian), [Browser Actions](https://actions.work/browser-actions) (which adds Shortcuts support for several major browsers), and [BarCuts](https://actions.work/barcuts) (a surprisingly useful contextual Shortcuts launcher). Check them out!
 
