@@ -30,6 +30,33 @@ To make this work, add this import to your project's `CLAUDE.md` file:
 @./.claude/tmp/project-files.md
 ```
 
+
+### `gemini-wrapper`
+
+A wrapper around `gemini` which utilizes [czottmann/claude-context-render](https://github.com/czottmann/claude-context-render) which makes Gemini "inherit" CC's context.
+
+#### Usage
+
+If you want to use it from the command line, run `gemini-wrapper` instead of `gemini`.
+
+#### What it does
+
+It collects `CLAUDE.md` files from the directory hierarchy (project folder up to `~/.claude/`), embeds their `@`-imports, and generates processed context files with resolved imports that are used as context for Gemini.
+
+#### Setup
+
+See [claude-context-render's README.md](https://github.com/czottmann/claude-context-render?tab=readme-ov-file#example):
+
+```bash
+claude-context-render setup
+```
+
+In your global (or project) `CLAUDE.md`, `@`-import the [`gemini.md` rule](project-rules/gemini.md), e.g.
+
+```
+@/Users/morty/agent-toolbox/project-rules/gemini.md
+```
+
 ### `xcodebuild-wrapper`
 
 A wafer-thin wrapper around `xcodebuild` which saves tokens by outputting only what's necessary.
@@ -43,7 +70,7 @@ It transparently hands over any arguments to `xcodebuild`. The difference to cal
 
 ### Setup
 
-In your global (or project) `CLAUDE.md`, `@`-import the [project-rules/xcode-builds.md](project-rules/xcode-builds.md), e.g.
+In your global (or project) `CLAUDE.md`, `@`-import the [`xcode-builds.md` rule](project-rules/xcode-builds.md), e.g.
 
 ```
 @/Users/morty/agent-toolbox/project-rules/xcode-builds.md
