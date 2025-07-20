@@ -2,9 +2,12 @@
 
 This repo contains files for setting up Claude Code ("CC") for local development (which is mostly Xcode work). It contains rules which can be `@`-imported from a `CLAUDE.md` file, as well as scripts for setting up wrapper scripts (which are described below).
 
+
 ## Wrappers
 
-These can be found in `bin/`. They are meant to by symlinked from `/usr/local/bin/`. The linking can be done by running `./setup-symlinks-from-bin.fish`.
+These can be found in `bin/`. They are meant to by symlinked from `/usr/local/bin/`.
+
+**The linking is done by running `./setup-symlinks-from-bin.fish`.**
 
 ### `claude-wrapper`
 
@@ -45,6 +48,18 @@ In your global (or project) `CLAUDE.md`, `@`-import the `project-rules/xcode-bui
 ```
 @/Users/morty/agent-toolbox/project-rules/xcode-builds.md
 ```
+
+## Project rules
+
+TODO
+
+
+## MCP server setup
+
+There are very few MCP servers that I use: [Linear MCP](https://linear.app/changelog/2025-05-01-mcp) and [Sentry](https://docs.sentry.io/product/sentry-mcp/)).
+
+**Set them up by running `./setup-claude-mcp-servers.fish`.**
+
 
 ## Requirements
 
