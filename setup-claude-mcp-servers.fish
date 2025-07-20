@@ -12,6 +12,7 @@ end
 
 set options "
 Linear MCP:linear
+Sentry MCP:sentry
 Quit:
 "
 
@@ -25,6 +26,10 @@ switch $selection
     case linear
         gum spin --spinner dot --title "Installing $selection…" -- \
             claude mcp add --transport sse linear https://mcp.linear.app/sse
+
+    case sentry
+        gum spin --spinner dot --title "Installing $selection…" -- \
+            claude mcp add --transport http sentry https://mcp.sentry.dev/mcp
 end
 and echo "✅ Installed."
 echo
