@@ -1,0 +1,15 @@
+#!/usr/bin/env fish
+
+set -l file_output ./.claude/tmp/project-files.txt
+
+# Create the directory if it doesn't exist
+mkdir -p ./.claude/tmp
+
+# Write fd output to the file
+fd . > $file_output
+
+# Call claude
+claude
+
+# Remove the file after claude quits
+rm $file_output
