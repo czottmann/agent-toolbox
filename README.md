@@ -7,11 +7,11 @@ This repo contains files for setting up Claude Code ("CC") for local development
 
 These can be found in `bin/`. They are meant to by symlinked from `/usr/local/bin/`.
 
-**The linking is done by running `./setup-bin-symlinks.fish`.**
+The linking is done by running `./setup-bin-symlinks.fish`.
 
-### `claude-wrapper`
+### claude-wrapper
 
-A simple wrapper which primes CC with a list of all files in the current directory. This information prevents a ton of _"Let me find that file"_ steps, speeding up things and saving tokens.
+A simple wrapper which primes CC with a list of all files in the current directory. This information prevents a ton of _"Let me find that file"_ steps, thus speeding things up and saving tokens.
 
 #### Usage
 
@@ -31,7 +31,7 @@ To make this work, add this import to your project's `CLAUDE.md` file:
 ```
 
 
-### `gemini-wrapper`
+### gemini-wrapper
 
 A wrapper around `gemini` which utilizes [czottmann/claude-context-render](https://github.com/czottmann/claude-context-render) which makes Gemini "inherit" CC's context.
 
@@ -57,7 +57,7 @@ In your global (or project) `CLAUDE.md`, `@`-import the [`gemini.md` rule](proje
 @/Users/morty/agent-toolbox/project-rules/gemini.md
 ```
 
-### `xcodebuild-wrapper`
+### xcodebuild-wrapper
 
 A wafer-thin wrapper around `xcodebuild` which saves tokens by outputting only what's necessary.
 
@@ -85,14 +85,14 @@ TODO
 
 Custom slash commands for CC are stored in `./commands/`. They are installed globally by symlinking `./commands/` to `~/.claude/commands`.
 
-**Set them up by running `./setup-global-commands.fish`.**
+Set them up by running `./setup-global-commands.fish`.
 
 
 ## MCP server setup
 
 There are very few MCP servers that I use, namely [Linear MCP](https://linear.app/changelog/2025-05-01-mcp) and [Sentry](https://docs.sentry.io/product/sentry-mcp/).
 
-**Set them up by running `./setup-mcp-servers.fish`.**
+Set them up by running `./setup-mcp-servers.fish`.
 
 
 ## Requirements
