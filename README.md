@@ -90,7 +90,7 @@ Custom slash commands for CC are stored in `./commands/`. They are installed glo
 
 ## MCP server setup
 
-There are very few MCP servers that I use: [Linear MCP](https://linear.app/changelog/2025-05-01-mcp) and [Sentry](https://docs.sentry.io/product/sentry-mcp/)).
+There are very few MCP servers that I use, namely [Linear MCP](https://linear.app/changelog/2025-05-01-mcp) and [Sentry](https://docs.sentry.io/product/sentry-mcp/).
 
 **Set them up by running `./setup-mcp-servers.fish`.**
 
@@ -103,13 +103,22 @@ This is an opinionated setup as I'm scratching my own itches here. I'm not aimin
 - [gum](https://github.com/charmbracelet/gum)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 
-Optional, if you want to use Google Gemini as a tool and **have it use CC's context** (see [project-rules/gemini.md](project-rules/gemini.md)):
+Optional, if you want to use Google Gemini as a tool and **have it use CC's context** (see above):
 
 - [claude-context-render](https://github.com/czottmann/claude-context-render)
 
 
+## Author
+
+Carlo Zottmann, <carlo@zottmann.dev>, https://c.zottmann.dev, https://github.com/czottmann
+
+> [!note] Did you know?
+>
+> I make Shortcuts-related macOS & iOS productivity apps like [Actions For Obsidian](https://actions.work/actions-for-obsidian), [Browser Actions](https://actions.work/browser-actions) (which adds Shortcuts support for several major browsers), and [BarCuts](https://actions.work/barcuts) (a surprisingly useful contextual Shortcuts launcher). Check them out!
+
+
 ## Acknowledgements
 
-Most rules have been looted wholesale from [steipete/agent-rules: Rules and Knowledge to work better with agents such as Claude Code or Cursor](https://github.com/steipete/agent-rules). Thanks, Peter!
+Most rules and ideas have been looted partially or wholesale from [steipete/agent-rules: Rules and Knowledge to work better with agents such as Claude Code or Cursor](https://github.com/steipete/agent-rules). Thanks for the inspiration and knowledge sharing, Peter! 🙏🏼
 
-I've cleaned them up for readability, adjusted them to my liking, and added a few of my own.
+What I took, I've cleaned up for readability and adjusted to my liking.
