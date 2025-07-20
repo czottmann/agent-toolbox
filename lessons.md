@@ -9,13 +9,13 @@ Modularizing the [project rules](project-rules/) is a good idea, but it's also a
 
 Case in point: One of the rules contained a code block that contained code blocks, something like this:
 
-> ```block1
-> code
->
-> ```block2
-> more codecode
-> ```
-> ```
+    ```markdown
+    # Something something
+
+    ```bash
+    more code
+    ```
+    ```
 
 As a human, I could comprehend it, but a Markdown parser can't. Claude read _everything_ below that point as being part of a code block, basically ignoring it. I only noticed that something was off because one of the rules that were `@`-imported below it weren't followed.
 
