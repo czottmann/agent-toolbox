@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/fish --login
+#!/usr/bin/env fish
 
 gum format -- "# Install MCP server(s) for `claude` in `$(pwd)`"
 echo
