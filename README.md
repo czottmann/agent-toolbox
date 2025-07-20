@@ -1,13 +1,13 @@
 # agent-toolbox
 
-This repo contains files for setting up Claude Code ("CC") for local development (which is mostly Xcode work). It contains rules which can be `@`-imported from a `CLAUDE.md` file, as well as scripts for setting up wrapper scripts (which are described below).
+This repo contains files for setting up Claude Code ("CC") for local development (which is mostly Xcode work). It contains rules which can be `@`-imported from a `CLAUDE.md` file, custom slash commands for CC, as well as scripts for setting up wrapper scripts (which are described below).
 
 
 ## Wrappers
 
 These can be found in `bin/`. They are meant to by symlinked from `/usr/local/bin/`.
 
-**The linking is done by running `./setup-symlinks-from-bin.fish`.**
+**The linking is done by running `./setup-bin-symlinks.fish`.**
 
 ### `claude-wrapper`
 
@@ -19,7 +19,7 @@ Call it instead of `claude`.
 
 #### What it does
 
-It generates the list, writes it to `./.claude/tmp/project-files.txt`, calls `claude`, and removes the temp file once CC quits.
+It generates the list, writes it to `./.claude/tmp/project-files.md`, calls `claude`, and removes the temp file once CC quits.
 
 #### Setup
 
@@ -27,7 +27,7 @@ To make this work, add this import to your project's `CLAUDE.md` file:
 
 ```markdown
 ## File list / directory layout
-@./.claude/tmp/project-files.txt
+@./.claude/tmp/project-files.md
 ```
 
 ### `xcodebuild-wrapper`
@@ -43,7 +43,7 @@ It transparently hands over any arguments to `xcodebuild`. The difference to cal
 
 ### Setup
 
-In your global (or project) `CLAUDE.md`, `@`-import the `project-rules/xcode-builds.md`, e.g.
+In your global (or project) `CLAUDE.md`, `@`-import the [project-rules/xcode-builds.md](project-rules/xcode-builds.md), e.g.
 
 ```
 @/Users/morty/agent-toolbox/project-rules/xcode-builds.md
@@ -54,11 +54,18 @@ In your global (or project) `CLAUDE.md`, `@`-import the `project-rules/xcode-bui
 TODO
 
 
+## Global commands
+
+Custom slash commands for CC are stored in `./commands/`. They are installed globally by symlinking `./commands/` to `~/.claude/commands`.
+
+**Set them up by running `./setup-global-commands.fish`.**
+
+
 ## MCP server setup
 
 There are very few MCP servers that I use: [Linear MCP](https://linear.app/changelog/2025-05-01-mcp) and [Sentry](https://docs.sentry.io/product/sentry-mcp/)).
 
-**Set them up by running `./setup-claude-mcp-servers.fish`.**
+**Set them up by running `./setup-mcp-servers.fish`.**
 
 
 ## Requirements
@@ -68,3 +75,14 @@ This is an opinionated setup as I'm scratching my own itches here. I'm not aimin
 - [Fish shell](https://fishshell.com)
 - [gum](https://github.com/charmbracelet/gum)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
+
+Optional, if you want to use Google Gemini as a tool and **have it use CC's context** (see [project-rules/gemini.md](project-rules/gemini.md)):
+
+- [claude-context-render](https://github.com/czottmann/claude-context-render)
+
+
+## Acknowledgements
+
+Most rules have been looted wholesale from [steipete/agent-rules: Rules and Knowledge to work better with agents such as Claude Code or Cursor](https://github.com/steipete/agent-rules). Thanks, Peter!
+
+I've cleaned them up for readability, adjusted them to my liking, and added a few of my own.

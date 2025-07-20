@@ -6,7 +6,6 @@
 # real `xcodebuild`.
 
 function xcodebuild_wrapper
-
     # Create a temporary file to capture output
     set temp_file (mktemp)
 

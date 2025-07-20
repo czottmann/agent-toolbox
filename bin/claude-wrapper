@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-set -l file_output ./.claude/tmp/project-files.txt
+set -l file_output ./.claude/tmp/project-files.md
 
 # Create the directory if it doesn't exist
 mkdir -p ./.claude/tmp

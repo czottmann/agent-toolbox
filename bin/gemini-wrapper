@@ -1,0 +1,20 @@
+#!/usr/bin/env fish
+
+function gemini_wrapper
+    # Generate context for Gemini by rendering out Claude's context
+    claude-context-render create
+
+    # Call Gemini
+    gemini $argv
+
+    # Clean up the generated context file
+    claude-context-render cleanup
+end
+
+# If this script is being run directly (not sourced), execute the wrapper
+if status is-interactive
+    # This is an interactive session, define the function for use
+else
+    # This script is being executed, run the wrapper with all arguments
+    gemini_wrapper $argv
+end
