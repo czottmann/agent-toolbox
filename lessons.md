@@ -7,15 +7,14 @@ Just some lessons I picked up along the way. They work for me, YMMV. I'm learnin
 
 Modularizing the [project rules](project-rules/) is a good idea, but it's also a good idea to _ensure_ that Claude can read them correctly.
 
-Case in point: One of the rules contained a code block that contained code blocks, something like this:
+Case in point: One of the rules contained a code block that contained code blocks, like this:
 
-    ```markdown
-    # Something something
+<pre><code>```markdown
+# Something something
 
-    ```bash
-    more code
-    ```
-    ```
+```bash
+```
+```</code></pre>
 
 As a human, I could comprehend it, but a Markdown parser can't. Claude read _everything_ below that point as being part of a code block, basically ignoring it. I only noticed that something was off because one of the rules that were `@`-imported below it weren't followed.
 

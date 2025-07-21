@@ -101,8 +101,9 @@ Fish shell utilities for development automation and build process enhancement.
 To enable file list priming in projects, add this to the project's CLAUDE.md:
 
 ```markdown
-## File list / directory layout
+## Files In This Project
 @./.claude/tmp/project-files.md
+
 ```
 
 ## MCP Servers
@@ -110,3 +111,8 @@ To enable file list priming in projects, add this to the project's CLAUDE.md:
 Supported MCP servers (install via `./setup-mcp-servers.fish`):
 - **Linear MCP** - Issue tracking and project management integration
 - **Sentry MCP** - Error monitoring and debugging integration
+
+
+## Files In This Project
+
+@./.claude/tmp/project-files.md

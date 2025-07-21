@@ -26,10 +26,8 @@ It generates the list, writes it to `./.claude/tmp/project-files.md`, calls `cla
 
 To make this work, add this import to your project's `CLAUDE.md` file:
 
-```markdown
-## File list / directory layout
-@./.claude/tmp/project-files.md
-```
+    ## Files In This Project
+    @./.claude/tmp/project-files.md
 
 
 ### gemini-wrapper
@@ -79,7 +77,7 @@ In your global (or project) `CLAUDE.md`, `@`-import the [`xcode-builds.md` rule]
 
 ## Project rules
 
-TODO
+See [project-rules](project-rules).
 
 
 ## Global commands
