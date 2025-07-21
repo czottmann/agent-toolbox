@@ -19,21 +19,37 @@ Case in point: One of the rules contained a code block that contained code block
 
 As a human, I could comprehend it, but a Markdown parser can't. Claude read _everything_ below that point as being part of a code block, basically ignoring it. I only noticed that something was off because one of the rules that were `@`-imported below it weren't followed.
 
-It took me a while to find the Markdown issue but it became clear once I rendered Claude's context out into a separate file (using [claude-context-render](https://github.com/czottmann/claude-context-render)), and skimmed it using [glow](https://github.com/charmbracelet/glow) (another Markdown rendered would've worked, too):
+It took me a while to find the Markdown issue but it became clear once I rendered Claude's context out into a separate file (using [render-claude-context](https://github.com/czottmann/render-claude-context)), and skimmed it using [glow](https://github.com/charmbracelet/glow) (another Markdown rendered would've worked, too):
 
 ```bash
 cd my-project-folder
 
 # Generates a resolved & rendered CLAUDE.md copy ("CLAUDE-derived.md"), starting
 # in project folder, up to ~/
-claude-context-render create
+render-claude-context create
 
 # Read the local file, repeat this step up the directory tree as necessary
 glow CLAUDE-derived.md
 
 # Removed the rendered files again
-claude-context-render cleanup
+render-claude-context cleanup
 ```
+
+
+## Make sure your CLAUDE.md file is semantically correct
+
+Claude parses the hierarchy of the document as well. So if the `CLAUDE.md` looks like this:
+
+    # Project rules
+
+    @rule1.md
+    @rule2.md
+
+    # Some other important info
+    …
+
+… then the headlines in these rules files should start at H2, not H1. Because if your `rule1.md` file begins with a H1, e.g. `# Rule 1`, then semantically, it's not a part of the "Project rules" section anymore.
+
 
 ## Save tokens by abbreviating tool output
 

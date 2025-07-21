@@ -1,17 +1,20 @@
-# Create well-formatted git commits with conventional commit messages
+## Create well-formatted git commits with conventional commit messages
 
-## Features:
+### Features:
+
 - Runs pre-commit checks by default (lint, build, generate docs)
 - Automatically stages files if none are staged
 - Uses conventional commit format with descriptive prefixes
 - Suggests splitting commits for different concerns
 
-## Usage:
+### Usage:
+
 - `/commit` - Standard commit with pre-commit checks
 - `/commit #$ARGUMENTS` - Standard commit with pre-commit checks, related to ticket #$ARGUMENTS
 - `/commit --no-verify` - Skip pre-commit checks
 
-## Commit Types:
+### Commit Types:
+
 - "FEAT": New features
 - "FIX": Bug fixes
 - "DOC": Documentation changes
@@ -26,7 +29,8 @@
 - "WIP": Work in progress
 - "CHG": General changes to existing code or functionality, i.e. anything that's not the above
 
-## Process:
+### Process:
+
 1. Check for staged changes (`git status`)
 2. If no staged changes, review and stage appropriate files
 3. Run pre-commit checks (unless --no-verify)
@@ -36,7 +40,8 @@
 7. Add body for complex changes explaining why
 8. Execute commit
 
-## Best Practices:
+### Best Practices:
+
 - Keep commits atomic and focused
 - Write in imperative mood ("Add feature" not "Added feature")
 - Explain why, not just what

@@ -2,13 +2,13 @@
 
 function gemini_wrapper
     # Generate context for Gemini by rendering out Claude's context
-    claude-context-render create
+    render-claude-context create
 
     # Call Gemini
     gemini $argv
 
     # Clean up the generated context file
-    claude-context-render cleanup
+    render-claude-context cleanup
 end
 
 # If this script is being run directly (not sourced), execute the wrapper

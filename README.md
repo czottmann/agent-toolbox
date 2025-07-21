@@ -34,7 +34,7 @@ To make this work, add this import to your project's `CLAUDE.md` file:
 
 ### gemini-wrapper
 
-A wrapper around `gemini` which utilizes [czottmann/claude-context-render](https://github.com/czottmann/claude-context-render) which makes Gemini "inherit" CC's context.
+A wrapper around `gemini` which utilizes [czottmann/render-claude-context](https://github.com/czottmann/render-claude-context) which makes Gemini "inherit" CC's context.
 
 #### Usage
 
@@ -46,10 +46,10 @@ It collects `CLAUDE.md` files from the directory hierarchy (project folder up to
 
 #### Setup
 
-See [claude-context-render's README.md](https://github.com/czottmann/claude-context-render?tab=readme-ov-file#example):
+See [render-claude-context's README.md](https://github.com/czottmann/render-claude-context?tab=readme-ov-file#example):
 
 ```bash
-claude-context-render setup
+render-claude-context setup
 ```
 
 In your global (or project) `CLAUDE.md`, `@`-import the [`gemini.md` rule](project-rules/gemini.md), e.g.
@@ -106,7 +106,7 @@ This is an opinionated setup as I'm scratching my own itches here. I'm not aimin
 
 Optional, if you want to use Google Gemini as a tool and **have it use CC's context** (see above):
 
-- [claude-context-render](https://github.com/czottmann/claude-context-render)
+- [render-claude-context](https://github.com/czottmann/render-claude-context)
 
 
 ## Author
