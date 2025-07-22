@@ -4,6 +4,14 @@ This repo contains files for setting up Claude Code ("CC") for local development
 
 As a bonus, [a few things I learned along the way](lessons.md).
 
+
+## Framework & SDK documentation
+
+See [framework-docs/](framework-docs/). I load them manually when they are helpful.
+
+I added their local directory path to `~/.claude/settings.json`'s `additionalDirectories` array so there's no extra permissions request.
+
+
 ## Wrappers
 
 These can be found in `bin/`. They are meant to by symlinked from `/usr/local/bin/`.
@@ -93,9 +101,10 @@ In your global (or project) `CLAUDE.md`, `@`-import the [`xcode-builds.md` rule]
 @/Users/morty/agent-toolbox/project-rules/xcode-builds.md
 ```
 
+
 ## Project rules
 
-See [project-rules](project-rules).
+See [project-rules](project-rules). These are `@`-imported one-by-one in my global `CLAUDE.md`.
 
 
 ## Global commands
@@ -120,7 +129,7 @@ This is an opinionated setup as I'm scratching my own itches here. I'm not aimin
 - [gum](https://github.com/charmbracelet/gum)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 
-Optional, if you want to use Google Gemini as a tool and **have it use CC's context** (see above):
+Optional, if you want to use Google Gemini or opencode as a tool and **have them use CC's context** (see above):
 
 - [render-claude-context](https://github.com/czottmann/render-claude-context)
 
