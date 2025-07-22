@@ -29,8 +29,10 @@ Each document MUST include:
 Each generated file MUST start with:
 
 ```
-<!-- Generated: YYYY-MM-DD HH:MM:SS UTC -->
+<!-- Generated: $timestamp -->
 ```
+
+Use your Bash tool to run `date -Iseconds` to get that `$timestamp`.
 
 ### Process
 
