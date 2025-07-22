@@ -4,6 +4,14 @@ function gemini_wrapper
     # Generate context for Gemini by rendering out Claude's context
     render-claude-context create
 
+    # Add list of project files to output file
+    echo "
+# Files In This Project
+```
+$(fd .)
+```
+" >>CLAUDE-derived.md
+
     # Call Gemini
     gemini $argv
 
