@@ -1,8 +1,8 @@
 ## Save tokens by providing the list of project files right off the bat
 
-Me: "Check file xyz.swift and tell me what's wrong" (file is in a folder two levels down)
+Me: _"Check file xyz.swift and tell me what's wrong"_ (file is in a folder two levels down)
 
-Claude: attempts to open `./xyz.swift`, fails, starts searching for the project folder
+Claude: attempts to open `./xyz.swift`, fails, starts searching for the file in the project folder, wasting time and money
 
 This isn't efficient, and can be prevented by providing a static list of files as part of the `CLAUDE.md`. First, I added these lines to the end of the project's `CLAUDE.md`:
 
