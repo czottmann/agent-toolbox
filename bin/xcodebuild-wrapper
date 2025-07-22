@@ -11,13 +11,13 @@ function xcodebuild_wrapper
 
     # Run xcodebuild with all provided arguments, capturing both stdout and stderr
     # Store the exit code for later use
-    /usr/bin/xcodebuild $argv &> $temp_file
+    /usr/bin/xcodebuild $argv &>$temp_file
     set exit_code $status
 
     # If build failed (non-zero exit code), show stderr; otherwise show stdout
     if test $exit_code -ne 0
-        # Build failed - output the error lines
-        rg --no-line-number --context 5 "error:" $temp_file
+        # Build failed - output the lines hinting at problems
+        rg --no-line-number --context 5 "error|failed|stopped" $temp_file
     else
         # Build succeeded - output last N lines of stdout
         tail -n 30 $temp_file
