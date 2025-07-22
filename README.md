@@ -32,7 +32,7 @@ To make this work, add this import to your project's `CLAUDE.md` file:
 
 ### gemini-wrapper
 
-A wrapper around `gemini` which utilizes [czottmann/render-claude-context](https://github.com/czottmann/render-claude-context) which makes Gemini "inherit" CC's context. Adds the list of project files to the output as well.
+A wrapper around `gemini` which utilizes [czottmann/render-claude-context](https://github.com/czottmann/render-claude-context) to make Gemini "inherit" CC's context. Adds the list of project files to the output as well.
 
 #### Usage
 
@@ -40,7 +40,7 @@ If you want to use it from the command line, run `gemini-wrapper` instead of `ge
 
 #### What it does
 
-It collects `CLAUDE.md` files from the directory hierarchy (project folder up to `~/.claude/`), embeds their `@`-imports and commands, and generates processed context files with resolved imports that are used as context for Gemini.
+It collects `CLAUDE.md` files from the directory hierarchy (project folder up to `~/.claude/`), embeds their `@`-imports and commands, and generates processed context files with resolved imports that are used as context for Gemini. Those are stored right next to the found `CLAUDE.md` files, while the global file is saved to `~/.gemini/`.
 
 #### Setup
 
@@ -68,7 +68,7 @@ If you want to use it from the command line, run `opencode-wrapper` instead of `
 
 #### What it does
 
-It collects `CLAUDE.md` files from the directory hierarchy (project folder up to `~/.config/opencode/`), embeds their `@`-imports and commands, and generates processed context files with resolved imports that are used as context for opencode.
+It collects `CLAUDE.md` files from the directory hierarchy (project folder up to `~/.claude/`), embeds their `@`-imports and commands, and generates processed context files with resolved imports that are used as context for opencode. Those are stored right next to the found `CLAUDE.md` files, while the global file is saved to `~/.config/opencode/`.
 
 #### Setup
 
