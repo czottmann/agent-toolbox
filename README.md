@@ -2,7 +2,7 @@
 
 This repo contains files for setting up Claude Code ("CC") for local development (which is mostly Xcode work). It contains rules which can be `@`-imported from a `CLAUDE.md` file, custom slash commands for CC, as well as scripts for setting up wrapper scripts (which are described below).
 
-As a bonus, [a few things I learned along the way](lessons.md).
+As a bonus, [a few things I learned along the way](things-i-learned/).
 
 
 ## Framework & SDK documentation
