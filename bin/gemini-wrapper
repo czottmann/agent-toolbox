@@ -8,7 +8,7 @@ function gemini_wrapper
     echo "
 # Files In This Project
 ```
-$(fd .)
+$(fd . --absolute-path)
 ```
 " >>CLAUDE-derived.md
 
