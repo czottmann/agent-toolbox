@@ -10,7 +10,7 @@
 ### Usage:
 
 - `/commit` - Standard commit with pre-commit checks
-- `/commit #$ARGUMENTS` - Standard commit with pre-commit checks, related to ticket #$ARGUMENTS
+- `/commit <ticket-id>` - Standard commit with pre-commit checks, related to ticket $ARGUMENTS
 - `/commit --no-verify` - Skip pre-commit checks
 
 ### Commit Types:
