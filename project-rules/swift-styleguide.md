@@ -14,7 +14,7 @@ Applies to all `**/*.swift` files.
 
 ### `guard` clauses
 
-`guard` clauses MUST be written multi-line. If a clause combines multiple conditions, each condition MUST be on its own line. The `else` keyword MUST be on its own line. If the `else` block is only one line, there MUST NOT be any line breaks between the else, the brackets, and inside the brackets.
+`guard` clauses MUST be written multi-line. If a clause combines multiple conditions, each condition MUST be on its own line.
 
 #### Examples
 
@@ -23,8 +23,9 @@ Applies to all `**/*.swift` files.
 guard somethingCondition else { return }
 
 // ✅ Good
-guard somethingCondition
-else { return }
+guard somethingCondition else {
+  return
+}
 
 // ❌ Bad
 guard !somethingCondition1, let something else { return }
@@ -32,16 +33,7 @@ guard !somethingCondition1, let something else { return }
 // ✅ Good
 guard !somethingCondition1,
       let something
-else { return }
-
-// ❌ Bad
-guard !somethingCondition2, let something else { print("Nope"); return }
-
-// ✅ Good
-guard !somethingCondition2,
-      let something
 else {
-  print("Nope")
   return
 }
 ```
