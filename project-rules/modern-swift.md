@@ -13,13 +13,15 @@ Write idiomatic SwiftUI code following Apple's latest architectural recommendati
 
 #### 1. Embrace Native State Management
 
-Use SwiftUI's built-in property wrappers appropriately:
+For simple use cases that don't contain a lot of logic and state, use SwiftUI's built-in property wrappers appropriately:
 
 - `@State` - Local, ephemeral view state
 - `@Binding` - Two-way data flow between views
 - `@Observable` - Shared state (iOS 17+)
 - `@ObservableObject` - Legacy shared state (pre-iOS 17)
 - `@Environment` - Dependency injection for app-wide concerns
+
+For more complex use cases with lots of logic and interdependent states, use [Composable Architecture](https://github.com/pointfreeco/swift-composable-architecture). Before starting to write code, read the TCA documentation using context7 MCP (context7 ID: `/pointfreeco/swift-composable-architecture`).
 
 #### 2. State Ownership Principles
 

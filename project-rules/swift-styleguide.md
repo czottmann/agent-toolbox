@@ -59,11 +59,3 @@ if !somethingCondition1,
   return
 }
 ```
-
-### Formatting
-
-When asked to format the files, run:
-
-```bash
-swiftformat --config ~/Code/.swiftformat <file> <file> ...
-```

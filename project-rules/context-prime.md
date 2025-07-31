@@ -5,10 +5,11 @@ Prime Claude with comprehensive project understanding.
 ### Standard Context Loading:
 
 1. Read README.md for project overview
-2. Read CLAUDE.md for AI-specific instructions
-3. List project files excluding ignored paths
-4. Review key configuration files
-5. Understand project structure and conventions
+2. If it exists, read the documentation in `docs/`
+3. Read CLAUDE.md for AI-specific instructions
+4. Unless CLAUDE.md didn't contain a list of project files, generate a list excluding ignored paths
+6. Review key configuration files
+7. Understand project structure and conventions
 
 ### Steps:
 
