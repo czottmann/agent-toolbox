@@ -33,12 +33,14 @@ Otherwise, query context7 MCP's tool with $ARGUMENTS.
 
 ### Docs shorthands
 
-| Shorthand   | Package name            | context7 library ID                        | File name                     |
-| ----------- | ----------------------- | ------------------------------------------ | ----------------------------- |
-| async-algos | swift-async-algorithms  | /apple/swift-async-algorithms              |                               |
-| buttonkit   | ButtonKit               |                                            | packages/buttonkit-0.6.md     |
-| collections | swift-collections       | /apple/swift-collections                   |                               |
-| defaults    | Defaults                |                                            | packages/defaults-8.20.md     |
-| grdb        | GRDB                    | /groue/grdb.swift                          |                               |
-| sb          | SharedBasics            |                                            | packages/sharedbasics-1.19.md |
-| tca         | Composable Architecture | /pointfreeco/swift-composable-architecture |                               |
+| Shorthand      | Package name            | context7 library ID                        | File name                      |
+| -------------- | ----------------------- | ------------------------------------------ | ------------------------------ |
+| async-algos    | swift-async-algorithms  | /apple/swift-async-algorithms              |                                |
+| buttonkit      | ButtonKit               |                                            | packages/buttonkit-0.6.md      |
+| collections    | swift-collections       | /apple/swift-collections                   |                                |
+| defaults       | Defaults                |                                            | packages/defaults-8.20.md      |
+| grdb           | GRDB                    | /groue/grdb.swift                          |                                |
+| networking     | freshOS/Networking      |                                            | packages/sharedbasics-1.19.md  |
+| sb             | SharedBasics            |                                            | packages/sharedbasics-1.19.md  |
+| simplekeychain | auth0/SimpleKeychain    |                                            | packages/simplekeychain-1.3.md |
+| tca            | Composable Architecture | /pointfreeco/swift-composable-architecture |                                |
