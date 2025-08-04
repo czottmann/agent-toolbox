@@ -1,6 +1,6 @@
 ## Make sure your rules are syntactically correct
 
-Modularizing the [project rules](project-rules/) is a good idea, but it's also a good idea to _ensure_ that Claude can read them correctly.
+Modularizing [the rules](rules/) is a good idea, but it's also a good idea to _ensure_ that Claude can read them correctly.
 
 Case in point: One of the rules contained a code block that contained code blocks, like this:
 
