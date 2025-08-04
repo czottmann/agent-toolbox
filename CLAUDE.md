@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Repository Overview
 
 This is a personal development toolbox containing:
-- **Project Rules**: Structured workflow templates in `project-rules/` for common development tasks
+- **Global & Project Rules**: Structured workflow templates in `rules/` for common development tasks
 - **Custom Commands**: Claude slash commands in `commands/` for specific workflows
 - **CLI Utilities**: Fish shell scripts in `bin/` for development automation
 
@@ -32,7 +32,7 @@ FEAT, FIX, DOC, REFACTOR, STYLE, PERF, TEST, CHORE, DEL, SEC, HOTFIX, WIP, CHG
 
 ## Architecture
 
-### Project Rules (`project-rules/`)
+### Rules (`rules/`)
 Template-driven workflow files that provide structured guidance:
 
 - **analyze-issue.md** - Linear issue analysis with technical specification generation
@@ -45,7 +45,9 @@ Template-driven workflow files that provide structured guidance:
 - **create-docs.md** - Create comprehensive documentation for components/features
 - **five.md** - "Five Whys" root cause analysis technique
 - **gemini.md** - Using Gemini CLI for large codebase analysis
+- **git-commits.md** - Conventional commit format and workflow guidelines
 - **implement-task.md** - Methodical task implementation with strategy evaluation
+- **linear.md** - Linear ticketing and project management integration
 - **mermaid.md** - Generate Mermaid diagrams for visualizing code structure
 - **modern-swift.md** - Modern SwiftUI development guidelines
 - **pr-review.md** - Multi-perspective pull request reviews (PM, Dev, QA, Security, DevOps, UX)
@@ -100,11 +102,11 @@ Fish shell utilities for development automation and build process enhancement.
 
 To enable file list priming in projects, add this to the project's CLAUDE.md:
 
-```markdown
-## Files In This Project
-@./.claude/tmp/project-files.md
+    ```markdown
+    ## Files In This Project
+    @./.claude/tmp/project-files.md
 
-```
+    ```
 
 ## MCP Servers
 

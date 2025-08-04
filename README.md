@@ -58,10 +58,10 @@ See [render-claude-context's README.md](https://github.com/czottmann/render-clau
 render-claude-context setup
 ```
 
-In your global (or project) `CLAUDE.md`, `@`-import the [`gemini.md` rule](project-rules/gemini.md), e.g.
+In your global (or project) `CLAUDE.md`, `@`-import the [`gemini.md` rule](rules/gemini.md), e.g.
 
 ```
-@/Users/morty/agent-toolbox/project-rules/gemini.md
+@/Users/morty/agent-toolbox/rules/gemini.md
 ```
 
 ### opencode-wrapper
@@ -95,16 +95,16 @@ It transparently hands over any arguments to `xcodebuild`. The difference to cal
 
 ### Setup
 
-In your global (or project) `CLAUDE.md`, `@`-import the [`xcode-builds.md` rule](project-rules/xcode-builds.md), e.g.
+In your global (or project) `CLAUDE.md`, `@`-import the [`xcode-builds.md` rule](rules/xcode-builds.md), e.g.
 
 ```
-@/Users/morty/agent-toolbox/project-rules/xcode-builds.md
+@/Users/morty/agent-toolbox/rules/xcode-builds.md
 ```
 
 
-## Project rules
+## Global & project rules
 
-See [project-rules](project-rules). These are `@`-imported one-by-one in my global `CLAUDE.md`.
+See [rules](rules). These are `@`-imported one-by-one in either the global or project `CLAUDE.md`.
 
 
 ## Global commands

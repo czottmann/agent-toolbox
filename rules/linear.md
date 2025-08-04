@@ -6,6 +6,9 @@ The ticket numbers follow the format "ZCO-<number>". Always reference tickets by
 
 If you create a ticket, and it's not clear which project to assign it to, prompt the user. When creating subtasks, use the project of the parent ticket by default.
 
+When you work on a ticket, add the existing "CC" label to it.
+
+
 ### Updating tickets with progress
 
 When the the status of a task in the ticket description has changed (task → task done), update that task in the description.
