@@ -14,7 +14,8 @@ The toolbox follows a template-driven approach where each workflow is documented
 ## Key Commands
 
 ### Setup Commands
-- `./setup-setup-bin-symlinks.fish` - Interactive script to create/remove symlinks from `bin/` to `/usr/local/bin/`
+- `./setup-bin-symlinks.fish` - Interactive script to create/remove symlinks from `bin/` to `/usr/local/bin/`
+- `./setup-global-commands.fish` - Maintain `commands/*` symlinks in `~/.claude/commands/`
 - `./setup-mcp-servers.fish` - Install MCP servers for Claude (Linear and Sentry)
 
 ### Development Utilities
@@ -41,7 +42,6 @@ Template-driven workflow files that provide structured guidance:
 - **clean.md** - Codebase formatting and linting fixes
 - **code-analysis.md** - Advanced code analysis with multiple inspection options
 - **context-prime.md** - Prime Claude with comprehensive project understanding
-- **create-command.md** - Guide for creating new custom Claude commands
 - **create-docs.md** - Create comprehensive documentation for components/features
 - **five.md** - "Five Whys" root cause analysis technique
 - **gemini.md** - Using Gemini CLI for large codebase analysis
@@ -56,6 +56,11 @@ Template-driven workflow files that provide structured guidance:
 - **update-docs.md** - Generate LLM-optimized documentation
 - **xcode-builds.md** - Use `xcodebuild-wrapper` for Xcode projects
 
+### Project-Type Definitions  (`project-types/`)
+These are rule "bundles" specific to certain types of projects.
+
+- **swift-project.md** - Rules for macOS/iOS development work
+
 ### Custom Commands (`commands/`)
 Claude slash command definitions for specific workflows with parameter handling.
 
@@ -63,11 +68,6 @@ Claude slash command definitions for specific workflows with parameter handling.
 Fish shell utilities for development automation and build process enhancement.
 
 ## Development Workflow
-
-### For New Project Rules
-1. Follow template in `create-command.md`
-2. Include structured sections: Purpose, Process, Examples, Notes
-3. Use action-oriented naming and clear parameter definitions
 
 ### For Xcode Projects
 - Use `xcodebuild-wrapper` instead of direct `xcodebuild` for cleaner output
