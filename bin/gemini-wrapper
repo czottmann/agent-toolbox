@@ -12,7 +12,7 @@ $(fd . --absolute-path)
 ```
 " >>CLAUDE-derived.md
 
-    # Call Gemini
+    # Call agent
     gemini $argv
 
     # Clean up the generated context file

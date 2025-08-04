@@ -6,9 +6,9 @@ set -l file_output ./.claude/tmp/project-files.md
 mkdir -p ./.claude/tmp
 
 # Write fd output to the file
-fd . --absolute-path > $file_output
+fd . --absolute-path >$file_output
 
-# Call claude
+# Call agent
 claude
 
 # Remove the file after claude quits

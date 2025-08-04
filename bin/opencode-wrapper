@@ -15,11 +15,11 @@ $(fd . --absolute-path)
 ```
 " >>$output_filename
 
-    # Call Gemini
+    # Call agent
     opencode $argv
 
     # Clean up the generated context file
-    render-claude-context cleanup --target opencode --filename AGENTS.md
+    render-claude-context cleanup --target opencode --filename $output_filename
 end
 
 # If this script is being run directly (not sourced), execute the wrapper
