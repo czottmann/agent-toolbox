@@ -1,0 +1,31 @@
+#!/usr/bin/env fish
+
+function crush_wrapper
+    set -l output_filename CRUSH.md
+
+    # Generate context for opencode by rendering out Claude's context.
+    # ATTN: 0FG MODE -- THIS OVERWRITES BOTH LOCAL AND GLOBAL AGENTS.MD
+    render-claude-context create --target crush --output-folder project --filename $output_filename
+
+    # Add list of project files to output file
+    echo "
+# Files In This Project
+```
+$(fd . --absolute-path)
+```
+" >>$output_filename
+
+    # Call agent
+    crush $argv
+
+    # Clean up the generated context file
+    render-claude-context cleanup --target crush --output-folder project --filename $output_filename
+end
+
+# If this script is being run directly (not sourced), execute the wrapper
+if status is-interactive
+    # This is an interactive session, define the function for use
+else
+    # This script is being executed, run the wrapper with all arguments
+    crush_wrapper $argv
+end
