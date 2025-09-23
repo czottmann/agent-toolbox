@@ -1,12 +1,17 @@
 ## Linear: Ticketing & Project Management
 
-We track our tickets and projects in Linear (https://linear.app), a project management tool. Use the Linear MCP for communicating with Linear.
+We track our tickets and projects in Linear (https://linear.app), a project management tool. Use your Bash tool to call the `linearis` executable for communicating with Linear. You MUST run `linearis usage` ONCE to see its available tools.
 
 The ticket numbers follow the format "ZCO-<number>". Always reference tickets by their number.
 
 If you create a ticket, and it's not clear which project to assign it to, prompt the user. When creating subtasks, use the project of the parent ticket by default.
 
-When you work on a ticket, add the existing "CC" label to it.
+When you work on a ticket, you MUST add the existing "A:CC" label to it.
+
+You MUST NEVER declare "Implementation Complete!" in a ticket or comment unless explicitly told so.
+
+### Usage
+
 
 
 ### Updating tickets with progress
