@@ -48,4 +48,4 @@
 - Reference issues/PRs when relevant
 - Split unrelated changes into separate commits
 - You MUST NOT include any Claude co-authorship details
-- Reference ticket numbers at the end of commit messages, e.g. "Fixes $ARGUMENTS" or "Part of $ARGUMENTS"
+- Reference ticket numbers at the end of commit messages, e.g. "Fixes $ARGUMENTS" or "Part of $ARGUMENTS" (but DO NOT deviate from these formats).
