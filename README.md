@@ -1,3 +1,7 @@
+# ARCHIVED. Superseded by [Claude Code Stuff](https://github.com/czottmann/claude-code-stuff).
+
+---
+
 # agent-toolbox
 
 This repo contains files for setting up Claude Code ("CC") for local development (which is mostly Xcode work). It contains rules which can be `@`-imported from a `CLAUDE.md` file, custom slash commands for CC, as well as scripts for setting up wrapper scripts (which are described below).
